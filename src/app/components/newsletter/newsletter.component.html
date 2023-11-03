@@ -1,0 +1,44 @@
+<main class="items-center lg:p-10 justify-center align-middle">
+  <section class="flex flex-col md:flex-row-reverse bg-white h-full w-full rounded-2xl overflow-hidden lg:p-5 pt-0 ">
+    <div class="image-container bg-orange-800 w-full h-56 md:h-full">
+      <img src="../assets/images/illustration-sign-up-mobile.svg" alt="" class="object-cover md:hidden">
+      <img src="../assets/images/illustration-sign-up-desktop.svg" alt="" class="object-cover hidden md:block">
+    </div>
+    <div class="w-full  align-middle justify-center p-5 mt-10 mb-10 lg:p-10">
+      <h3 class="my-5 text-left text-3xl font-bold ">Stay updated!</h3>
+      <h4>Join 60,000+ product managers receiving monthly updates on:</h4>
+      <p><span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+            <g fill="none">
+              <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+              <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+            </g>
+          </svg></span>Product discovery and building what matters</p>
+      <p><span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+            <g fill="none">
+              <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+              <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+            </g>
+          </svg></span>Measuring to ensure updates are a success</p>
+      <p><span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+            <g fill="none">
+              <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+              <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+            </g>
+          </svg></span>And much more!</p>
+      <form [formGroup]="emailForm" (ngSubmit)="submit()">
+        <div class="relative mb-4">
+          <div class="grid grid-cols-2 justify-between  align-middle items-center">
+            <label for="email" class="leading-7 text-sm text-gray-400">Email address</label>
+            <p *ngIf="this.emailForm.touched && !this.emailForm.valid" class="ml-5 text-red-500 font-medium" >Valid email required</p>
+          </div>
+          <input formControlName="email" type="email" id="email" name="email"
+            class="w-full  bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-blue-900 rounded border border-gray-600 focus:border-blue-500 text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            placeholder="example@gmail.com">
+        </div>
+        <button type="submit"
+          class="submit w-full text-white  border-0 py-2 px-8 focus:outline-none  rounded text-lg">Subscribe
+          to monthly newsletter</button>
+      </form>
+    </div>
+  </section>
+</main>

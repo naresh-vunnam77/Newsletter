@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+body{
+  font-family: 'Roboto',Arial, Helvetica, sans-serif;
+  background-color: hsl(235, 18%, 26%);
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container{
+  background-color: hsl(4, 100%, 67%);
+}
+
+.submit{
+  background-color: hsl(234, 29%, 20%);
+  color: #fff;
+}
+
+.submit:hover{
+  background-color: hsl(4, 100%, 67%);
+}
+
+
+p{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p span{
+  margin-right: 5px;
+}
+
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+  color: #000;
+  background: lightcoral;
+}
